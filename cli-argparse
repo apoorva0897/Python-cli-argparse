@@ -1,0 +1,14 @@
+import argparse
+
+def main():
+    parser = argparse.ArgumentParser(description="Simple CLI tool example using argparse")
+    parser.add_argument('--name', type=str, help='User name to greet')
+    args = parser.parse_args()
+
+    if args.name:
+        print(f"Hi {args.name}! Welcome to your CLI tool.")
+    else:
+        print("Hello! Please provide your name using --name.")
+
+if __name__ == "__main__":
+    main()
